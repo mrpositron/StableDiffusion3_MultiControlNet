@@ -23,12 +23,65 @@ elif isinstance(self.controlnet, SD3MultiControlNetModel):
 
 This repository introduces a **hack** to bypass the limitation and enable **MultiControlNet** functionality for Inpainting in combination with other ControlNets. The modifications are minimal and maintain compatibility with the original codebase.
 
+### Inputs
+<div align="center">
+<p float="left">
+  <figure style="display: inline-block; margin: 0 20px;">
+    <img src="assets/sample_image.png" width="300" />
+    <figcaption style="text-align: center">Image</figcaption>
+  </figure>
+  <figure style="display: inline-block; margin: 0 20px;">
+    <img src="assets/sample_mask.png" width="300" />
+    <figcaption style="text-align: center">Mask</figcaption>
+  </figure>
+  <figure style="display: inline-block; margin: 0 20px;">
+    <img src="assets/sample_pose_1.png" width="300" />
+    <figcaption style="text-align: center">Pose</figcaption>
+  </figure>
+</p>
+</div>
+
+### Results
+<div align="center">
+<p float="left">
+  <figure style="display: inline-block; margin: 0 20px;">
+    <img src="assets/res_0.png" width="300" />
+    <figcaption style="text-align: center">Vanilla text to image</figcaption>
+  </figure>
+  <figure style="display: inline-block; margin: 0 20px;">
+    <img src="assets/res_1.png" width="300" />
+    <figcaption style="text-align: center">Inpainting ControlNet</figcaption>
+  </figure>
+  <figure style="display: inline-block; margin: 0 20px;">
+    <img src="assets/res_2.png" width="300" />
+    <figcaption style="text-align: center">OpenPose ControlNet</figcaption>
+  </figure>
+  <figure style="display: inline-block; margin: 0 20px;">
+    <img src="assets/res_3.png" width="300" />
+    <figcaption style="text-align: center">Inpainting + OpenPose MultiControlNet</figcaption>
+  </figure>
+</p>
+</div>
+
 ## Files Included
 This repository includes only two modified files:
+- [pipeline_sd3_controlnet_inpaint_custom.py](pipeline_sd3_controlnet_inpaint_custom.py)
+- [custom_controlnet_sd3.py](custom_controlnet_sd3.py)
 
 ## Usage
 
+In [example_notebook.ipynb](example_notebook.ipynb) there is a an example of a MultiControlNet Pose + Inpainting. 
 
 ## Disclaimer
 
 This implementation is a workaround and may not be fully optimized. Use it with caution, and consider contributing to an official solution if needed.
+
+## Future work
+If time permits, I plan to refine this implementation and submit a pull request to integrate it into the official Diffusers library.
+
+### Notes
+
+Update libraries beforehands
+```bash
+pip install --upgrade transformers diffusers accelerate
+```
