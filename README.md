@@ -1,1 +1,34 @@
-# StableDiffusion3_MultiControlNet
+# Full MultiControlNet Support for Stable Diffusion 3
+
+This repository provides a workaround to enable **MultiControlNet** functionality for all available ControlNets in Stable Diffusion 3 (SD3). As of December 20, 2024, the following ControlNets are supported:
+1. [Canny](https://huggingface.co/InstantX/SD3-Controlnet-Canny)
+2. [Pose](https://huggingface.co/InstantX/SD3-Controlnet-Pose)
+3. [Tile](https://huggingface.co/InstantX/SD3-Controlnet-Tile)
+4. [Inpainting](https://huggingface.co/alimama-creative/SD3-Controlnet-Inpainting)
+
+## Background
+- **Canny**, **Pose**, and **Tile** ControlNets are developed by the InstantX team.
+- **Inpainting** ControlNet is provided by the AlimamaCreative team.
+
+While the official [HuggingFace Diffusers](https://github.com/huggingface/diffusers) library includes support for MultiControlNet with ControlNets from the InstantX team (see [pipeline_stable_diffusion_3_controlnet.py](https://github.com/huggingface/diffusers/blob/main/src/diffusers/pipelines/controlnet_sd3/pipeline_stable_diffusion_3_controlnet.py)), it does not provide support for combining these with the Inpainting ControlNet from AlimamaCreative.
+
+## Limitations in Official Code
+
+The official SD3ControlNetInpaintingPipeline explicitly does not support MultiControlNet (as of 20.12.2024), as shown in the following snippet from the source code:
+```python
+elif isinstance(self.controlnet, SD3MultiControlNetModel):
+    raise NotImplementedError("MultiControlNetModel is not supported for SD3ControlNetInpaintingPipeline.")
+```
+## Purpose of This Repository
+
+This repository introduces a **hack** to bypass the limitation and enable **MultiControlNet** functionality for Inpainting in combination with other ControlNets. The modifications are minimal and maintain compatibility with the original codebase.
+
+## Files Included
+This repository includes only two modified files:
+
+## Usage
+
+
+## Disclaimer
+
+This implementation is a workaround and may not be fully optimized. Use it with caution, and consider contributing to an official solution if needed.
