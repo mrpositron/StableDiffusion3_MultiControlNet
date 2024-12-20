@@ -26,40 +26,40 @@ This repository introduces a **hack** to bypass the limitation and enable **Mult
 ### Inputs
 <div align="center">
 <p float="left">
-  <figure style="display: inline-block; margin: 0 1px;">
-    <img src="assets/sample_image.png" width="200" />
-    <figcaption style="text-align: center">Image</figcaption>
-  </figure>
-  <figure style="display: inline-block; margin: 0 1px;">
-    <img src="assets/sample_mask.png" width="200" />
-    <figcaption style="text-align: center">Mask</figcaption>
-  </figure>
-  <figure style="display: inline-block; margin: 0 1px;">
-    <img src="assets/sample_pose_1.png" width="200" />
-    <figcaption style="text-align: center">Pose</figcaption>
-  </figure>
+<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<img src="assets/sample_image.png" width="200" />
+<figcaption style="text-align: center">Image</figcaption>
+</figure>
+<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<img src="assets/sample_mask.png" width="200" />
+<figcaption style="text-align: center">Mask</figcaption>
+</figure>
+<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<img src="assets/sample_pose_1.png" width="200" />
+<figcaption style="text-align: center">Pose</figcaption>
+</figure>
 </p>
 </div>
 
-### Results
+**### Results**
 <div align="center">
 <p float="left">
-  <figure style="display: inline-block; margin: 0 1px;">
-    <img src="assets/res_0.png" width="200" />
-    <figcaption style="text-align: center">Vanilla text to image</figcaption>
-  </figure>
-  <figure style="display: inline-block; margin: 0 1px;">
-    <img src="assets/res_1.png" width="200" />
-    <figcaption style="text-align: center">Inpainting ControlNet</figcaption>
-  </figure>
-  <figure style="display: inline-block; margin: 0 1px;">
-    <img src="assets/res_2.png" width="200" />
-    <figcaption style="text-align: center">OpenPose ControlNet</figcaption>
-  </figure>
-  <figure style="display: inline-block; margin: 0 1px;">
-    <img src="assets/res_3.png" width="200" />
-    <figcaption style="text-align: center">Inpainting + OpenPose MultiControlNet</figcaption>
-  </figure>
+<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<img src="assets/res_0.png" width="200" />
+<figcaption style="text-align: center">Vanilla text to image</figcaption>
+</figure>
+<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<img src="assets/res_1.png" width="200" />
+<figcaption style="text-align: center">Inpainting ControlNet</figcaption>
+</figure>
+<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<img src="assets/res_2.png" width="200" />
+<figcaption style="text-align: center">OpenPose ControlNet</figcaption>
+</figure>
+<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<img src="assets/res_3.png" width="200" />
+<figcaption style="text-align: center">Inpainting + OpenPose MultiControlNet</figcaption>
+</figure>
 </p>
 </div>
 
