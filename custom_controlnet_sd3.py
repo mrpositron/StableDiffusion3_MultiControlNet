@@ -398,8 +398,9 @@ class SD3MultiControlNetModel(ModelMixin):
     ) -> Union[SD3ControlNetOutput, Tuple]:
         
         
-        
-        control_block_samples = None
+
+        num_transformer_blocks = 24
+        temp_control_block_samples = []
         for i, (image, scale, controlnet) in enumerate(zip(controlnet_cond, conditioning_scale, self.nets)):
             block_samples = controlnet(
                 hidden_states=hidden_states,
@@ -412,22 +413,13 @@ class SD3MultiControlNetModel(ModelMixin):
                 return_dict=return_dict,
             )
             if i == 0:
-                control_block_samples = block_samples
-            else:
-                temp_control_block_samples = []
+                for j in range(num_transformer_blocks - 1):
+                    temp_control_block_samples.append(torch.zeros_like(block_samples[0][0]))
 
-                clen = len(control_block_samples[0])
-                blen = len(block_samples[0])
-
-                # this is hardcoded for now
-                num_transformer_blocks = 24
-
-                interval_control_c = num_transformer_blocks // clen
-                interval_control_b = num_transformer_blocks // blen
-                for j in range(clen):
-                    temp_c = control_block_samples[0][j//interval_control_c]
-                    temp_b = block_samples[0][j//interval_control_b]
-                    temp_control_block_samples.append(temp_c + temp_b)
-
-                control_block_samples = (tuple(temp_control_block_samples),)
+            blen = len(block_samples[0])
+            interval_control_b = num_transformer_blocks // blen
+            for j in range(num_transformer_blocks - 1):
+                temp_b = block_samples[0][j//interval_control_b]
+                temp_control_block_samples[j] += temp_b
+        control_block_samples = (tuple(temp_control_block_samples),)
         return control_block_samples
