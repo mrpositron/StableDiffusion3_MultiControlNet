@@ -1,14 +1,14 @@
 # Full MultiControlNet Support for Stable Diffusion 3
 
-This repository provides a workaround to enable **MultiControlNet** functionality for all available ControlNets in Stable Diffusion 3 (SD3). As of December 20, 2024, the following ControlNets are supported:
+This repository provides a workaround to enable **MultiControlNet** functionality for all available ControlNets in Stable Diffusion 3 (SD3). As of December 20, 2024, the following [ControlNets are supported](https://huggingface.co/docs/diffusers/en/api/pipelines/controlnet_sd3):
 1. [Canny](https://huggingface.co/InstantX/SD3-Controlnet-Canny)
 2. [Pose](https://huggingface.co/InstantX/SD3-Controlnet-Pose)
 3. [Tile](https://huggingface.co/InstantX/SD3-Controlnet-Tile)
 4. [Inpainting](https://huggingface.co/alimama-creative/SD3-Controlnet-Inpainting)
 
 ## Background
-- **Canny**, **Pose**, and **Tile** ControlNets are developed by the InstantX team.
-- **Inpainting** ControlNet is provided by the AlimamaCreative team.
+- **Canny**, **Pose**, and **Tile** ControlNets are developed by the [InstantX team](https://huggingface.co/InstantX).
+- **Inpainting** ControlNet is provided by the [AlimamaCreative team](https://huggingface.co/alimama-creative/SD3-Controlnet-Inpainting).
 
 While the official [HuggingFace Diffusers](https://github.com/huggingface/diffusers) library includes support for MultiControlNet with ControlNets from the InstantX team (see [pipeline_stable_diffusion_3_controlnet.py](https://github.com/huggingface/diffusers/blob/main/src/diffusers/pipelines/controlnet_sd3/pipeline_stable_diffusion_3_controlnet.py)), it does not provide support for combining these with the Inpainting ControlNet from AlimamaCreative.
 
