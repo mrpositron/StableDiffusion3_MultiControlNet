@@ -28,43 +28,39 @@ This repository introduces a **hack** to bypass the limitation and enable **Mult
 <p float="left">
 <figure style="display: inline-block; margin: 0 1px; width: 200px;">
 <img src="assets/sample_image.png" width="200" />
-<figcaption style="text-align: center">Image</figcaption>
 </figure>
 <figure style="display: inline-block; margin: 0 1px; width: 200px;">
 <img src="assets/sample_mask.png" width="200" />
-<figcaption style="text-align: center">Mask</figcaption>
 </figure>
 <figure style="display: inline-block; margin: 0 1px; width: 200px;">
 <img src="assets/sample_pose_1.png" width="200" />
-<figcaption style="text-align: center">Pose</figcaption>
 </figure>
 </p>
 </div>
+<p align="center">
+<b>a.</b> Image; &emsp; <b>b.</b> Mask; &emsp; <b>c.</b> Pose;
+</p>
 
 ### Results
 <div align="center">
 <p float="left">
-<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<figure style="display: inline-block; margin: 0 5px; width: 200px;">
 <img src="assets/res_0.png" width="200" />
-<figcaption style="text-align: center">Vanilla text to image</figcaption>
 </figure>
-<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<figure style="display: inline-block; margin: 0 5px; width: 200px;">
 <img src="assets/res_1.png" width="200" />
-<figcaption style="text-align: center">Inpainting ControlNet</figcaption>
 </figure>
-<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<figure style="display: inline-block; margin: 0 5px; width: 200px;">
 <img src="assets/res_2.png" width="200" />
-<figcaption style="text-align: center">OpenPose ControlNet</figcaption>
 </figure>
-<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<figure style="display: inline-block; margin: 0 5px; width: 200px;">
 <img src="assets/res_3.png" width="200" />
-<figcaption style="text-align: center">Inpainting + OpenPose MultiControlNet</figcaption>
 </figure>
 </p>
 </div>
 
 <p align="center">
-<b>Vanilla Text to Image</b> &emsp; <b>Inpainting ControlNet</b> &emsp; <b>OpenPose ControlNet</b> &emsp; <b>Inpainting + OpenPose MultiControlNet</b>
+<b>a.</b> Vanilla Text to Image; &emsp; <b>b.</b> Inpainting ControlNet; &emsp; <b>c.</b> OpenPose ControlNet; &emsp; <b>d.</b> Inpainting + OpenPose MultiControlNet
 </p>
 
 ## Files Included
