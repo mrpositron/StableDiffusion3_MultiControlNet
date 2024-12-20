@@ -25,20 +25,20 @@ This repository introduces a **hack** to bypass the limitation and enable **Mult
 
 ### Inputs
 <div align="center">
-<div style="display: flex; justify-content: center; gap: 1px;">
-    <div style="width: 200px;">
-        <img src="assets/sample_image.png" width="200" />
-        <p style="margin: 5px 0; text-align: center">Image</p>
-    </div>
-    <div style="width: 200px;">
-        <img src="assets/sample_mask.png" width="200" />
-        <p style="margin: 5px 0; text-align: center">Mask</p>
-    </div>
-    <div style="width: 200px;">
-        <img src="assets/sample_pose_1.png" width="200" />
-        <p style="margin: 5px 0; text-align: center">Pose</p>
-    </div>
-</div>
+<p float="left">
+<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<img src="assets/sample_image.png" width="200" />
+<figcaption style="text-align: center">Image</figcaption>
+</figure>
+<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<img src="assets/sample_mask.png" width="200" />
+<figcaption style="text-align: center">Mask</figcaption>
+</figure>
+<figure style="display: inline-block; margin: 0 1px; width: 200px;">
+<img src="assets/sample_pose_1.png" width="200" />
+<figcaption style="text-align: center">Pose</figcaption>
+</figure>
+</p>
 </div>
 
 ### Results
@@ -62,6 +62,10 @@ This repository introduces a **hack** to bypass the limitation and enable **Mult
 </figure>
 </p>
 </div>
+
+<p align="center">
+<b>Vanilla Text to Image</b> &emsp; <b>Inpainting ControlNet</b> &emsp; <b>OpenPose ControlNet</b> &emsp; <b>Inpainting + OpenPose MultiControlNet</b>
+</p>
 
 ## Files Included
 This repository includes only two modified files:
