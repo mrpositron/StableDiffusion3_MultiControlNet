@@ -60,7 +60,7 @@ This repository introduces a **hack** to bypass the limitation and enable **Mult
 </div>
 
 <p align="center">
-<b>a.</b> Vanilla Text to Image; &emsp; <b>b.</b> Inpainting ControlNet; &emsp; <b>c.</b> OpenPose ControlNet; &emsp; <b>d.</b> Inpainting + OpenPose MultiControlNet
+<b>a.</b> Vanilla Text to Image; &emsp; <b>b.</b> Inpainting; &emsp; <b>c.</b> OpenPose; &emsp; <b>d.</b> Inpainting + OpenPose 
 </p>
 
 ## Files Included
