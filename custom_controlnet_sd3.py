@@ -413,8 +413,7 @@ class SD3MultiControlNetModel(ModelMixin):
                 return_dict=return_dict,
             )
             if i == 0:
-                for j in range(num_transformer_blocks - 1):
-                    temp_control_block_samples.append(torch.zeros_like(block_samples[0][0]))
+                temp_control_block_samples = [torch.zeros_like(block_samples[0][0]) for _ in range(num_transformer_blocks - 1)]
 
             blen = len(block_samples[0])
             interval_control_b = num_transformer_blocks // blen
