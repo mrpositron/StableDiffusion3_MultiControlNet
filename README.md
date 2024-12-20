@@ -79,7 +79,7 @@ This implementation is a workaround and may not be fully optimized. Use it with 
 ## Future work
 If time permits, I plan to refine this implementation and submit a pull request to integrate it into the official Diffusers library.
 
-### Notes
+## Notes
 
 Update libraries beforehands
 ```bash
