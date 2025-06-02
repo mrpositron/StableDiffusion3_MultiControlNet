@@ -83,5 +83,5 @@ If time permits, I plan to refine this implementation and submit a pull request 
 
 Update libraries beforehands
 ```bash
-pip install --upgrade transformers diffusers accelerate
+pip install diffusers==0.33.1 transformers accelerate
 ```
